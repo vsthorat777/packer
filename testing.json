@@ -1,0 +1,21 @@
+{
+	"builders":[
+		{
+			"type": "googlecompute",
+			"account_file": "my-trfm-project-41e058c8498f.json",
+			"project_id": "my-trfm-project",
+			"source_image": "debian-10-buster-v20220310",
+			"ssh_username": "packer",
+			"zone": "us-west4-a"
+		
+		}
+	],
+	
+	"provisioners":[
+		{
+		"type": "file",
+		"source": "test.json",
+		"destination": "/tmp/test.json"
+		}
+	]
+}
